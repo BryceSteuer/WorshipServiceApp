@@ -3,6 +3,7 @@ package com.example.worshipserviceapplication
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.worshipserviceapplication.Database.Entity.WorshipService
@@ -19,7 +20,7 @@ class ServiceAdapter
          val quantityTV = itemView.findViewById<TextView>(R.id.TVItemQuantity)
          val rateTV = itemView.findViewById<TextView>(R.id.TVItemRate)
          val amountTV = itemView.findViewById<TextView>(R.id.idTVTotalAmt)
-         val deleteTV = itemView.findViewById<TextView>(R.id.idTVDelete)
+         val deleteTV = itemView.findViewById<ImageView>(R.id.idTVDelete)
 
     }
 

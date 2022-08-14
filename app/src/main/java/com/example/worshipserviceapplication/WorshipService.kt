@@ -8,14 +8,20 @@ import androidx.room.PrimaryKey
 @Entity(tableName = "worship_services")
 data class WorshipService (
 
-    @ColumnInfo(name = "itemName")
-    var itemName: String,
+    @ColumnInfo(name = "firstHymnName")
+    var firstHymnName: String,
 
-    @ColumnInfo(name = "itemQuantity")
-    var itemQuantity: Int,
+    @ColumnInfo(name = "firstHymnNumber")
+    var firstHymnNumber: String,
 
-    @ColumnInfo(name = "itemPrice")
-    var itemPrice: Int,
+    @ColumnInfo(name = "psalm")
+    var psalm: String,
+
+    @ColumnInfo(name = "secondHymnName")
+    var secondHymnName: String,
+
+    @ColumnInfo(name = "secondHymnNumber")
+    var secondHymnNumber: String,
 
 ){
     @PrimaryKey(autoGenerate = true)

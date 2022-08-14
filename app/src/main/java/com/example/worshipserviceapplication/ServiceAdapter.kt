@@ -5,8 +5,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.ListView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.worshipserviceapplication.Database.Entity.WorshipService
+
 
 class ServiceAdapter
     (var list: List<WorshipService>,
@@ -16,11 +18,12 @@ class ServiceAdapter
 
     inner class ServiceViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
     {
-         val nameTV = itemView.findViewById<TextView>(R.id.TVItemName)
-         val quantityTV = itemView.findViewById<TextView>(R.id.TVItemQuantity)
-         val rateTV = itemView.findViewById<TextView>(R.id.TVItemRate)
-         val amountTV = itemView.findViewById<TextView>(R.id.idTVTotalAmt)
-         val deleteTV = itemView.findViewById<ImageView>(R.id.idTVDelete)
+        val firstNameTV = itemView.findViewById<TextView>(R.id.TVFirstHymnName)
+        val firstNumberTV = itemView.findViewById<TextView>(R.id.TVFirstHymnNumber)
+        val psalmTV = itemView.findViewById<TextView>(R.id.TVPsalmNumber)
+        val secondNameTV = itemView.findViewById<TextView>(R.id.TVSecondHymnName)
+        val secondNumberTV = itemView.findViewById<TextView>(R.id.TVSecondHymnNumber)
+        val deleteTV = itemView.findViewById<ImageView>(R.id.idTVDelete)
 
     }
 
@@ -35,11 +38,11 @@ class ServiceAdapter
     }
 
     override fun onBindViewHolder(holder: ServiceViewHolder, position: Int) {
-        holder.nameTV.text = list.get(position).itemName
-        holder.quantityTV.text = list.get(position).itemQuantity.toString()
-        holder.rateTV.text = "Rs." + list.get(position).itemPrice.toString()
-        var itemTotal : Int = list.get(position).itemPrice * list.get(position).itemQuantity
-        holder.amountTV.text = "Rs." + itemTotal.toString()
+        holder.firstNameTV.text = list.get(position).firstHymnName
+        holder.firstNumberTV.text = list.get(position).firstHymnNumber
+        holder.psalmTV.text = list.get(position).psalm
+        holder.secondNameTV.text = list.get(position).secondHymnName
+        holder.secondNumberTV.text = list.get(position).secondHymnNumber
         holder.deleteTV.setOnClickListener {
             worshipServiceClickInterface.onItemClick(list.get(position))
         }

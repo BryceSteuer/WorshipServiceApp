@@ -36,7 +36,7 @@
                 android:layout_height="wrap_content"
                 style="@style/TextInputEditTextTheme"
                 android:layout_margin="5dp"
-                android:hint="Enter First Hymn Name and Number"
+                android:hint="Enter First Hymn Name"
                 android:padding="5dp"
                 android:textColorHint="@color/white"
                 app:hintTextColor="@color/white"
@@ -47,6 +47,30 @@
                     android:id="@+id/EdtFirstHymn"
                     android:layout_margin="5dp"
                     android:inputType="text"
+                    android:textColorHint="@color/white"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/TextInputEditTextTheme"
+                android:layout_margin="5dp"
+                android:hint="Enter First Hymn Number"
+                android:layout_toRightOf="@+id/EdtFirstHymnName"
+                android:padding="20dp"
+                android:textColorHint="@color/white"
+                app:hintTextColor="@color/white"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/EdtFirstHymnNumber"
+                    android:layout_margin="5dp"
+                    android:inputType="number"
                     android:textColorHint="@color/white"
                     android:textColor="@color/white"
                     android:textSize="14sp"
@@ -82,7 +106,7 @@
                 android:layout_height="wrap_content"
                 style="@style/TextInputEditTextTheme"
                 android:layout_margin="5dp"
-                android:hint="Enter Second Hymn Number"
+                android:hint="Enter Second Hymn Name"
                 android:padding="5dp"
                 android:textColorHint="@color/white"
                 app:hintTextColor="@color/white"
@@ -97,6 +121,31 @@
                     android:textColor="@color/white"
                     android:textSize="14sp"
                     />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/TextInputEditTextTheme"
+                android:layout_margin="5dp"
+                android:hint="Enter Second Hymn Number"
+                android:padding="20dp"
+                android:textColorHint="@color/white"
+                app:hintTextColor="@color/white"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/SecondHymnNumber"
+                    android:layout_margin="5dp"
+                    android:inputType="number"
+                    android:textColorHint="@color/white"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
 
                 <LinearLayout
                     android:layout_width="match_parent"

@@ -50,21 +50,28 @@ class MainActivity : AppCompatActivity(), ServiceAdapter.WorshipServiceClickInte
         val cancelBtn = dialog.findViewById<Button>(R.id.idButtonCancel)
         val addBtn = dialog.findViewById<Button>(R.id.idButtonAdd)
         val firstHymnEdit = dialog.findViewById<EditText>(R.id.EdtFirstHymn)
+        val firstHymnNumberEdit = dialog.findViewById<EditText>(R.id.EdtFirstHymnNumber)
         val psalmEdt = dialog.findViewById<EditText>(R.id.EdtPsalm)
         val secondHymnEdt = dialog.findViewById<EditText>(R.id.SecondHymn)
+        val secondHymnNumberEdt = dialog.findViewById<EditText>(R.id.SecondHymnNumber)
         cancelBtn.setOnClickListener {
             Toast.makeText(applicationContext,"Cancelled", Toast.LENGTH_SHORT).show()
             dialog.dismiss()
         }
         addBtn.setOnClickListener {
             val firstHymn : String = firstHymnEdit.text.toString()
+            val firstHymnNumber : String = firstHymnNumberEdit.text.toString()
             val psalm : String = psalmEdt.text.toString()
             val secondHymn : String = secondHymnEdt.text.toString()
-            val psInt : Int = psalm.toInt()
-            val secInt : Int = secondHymn.toInt()
-            if(firstHymn.isNotEmpty() && psalm.isNotEmpty() && secondHymn.isNotEmpty()) {
-                val services = WorshipService(firstHymn,psInt,secInt)
-                modal.insert(services)
+            val secondHymnNumber : String = secondHymnNumberEdt.text.toString()
+            if(firstHymn.isNotEmpty() &&
+                    firstHymnNumber.isNotEmpty() &&
+                    psalm.isNotEmpty() &&
+                    secondHymn.isNotEmpty() &&
+                    secondHymnNumber.isNotEmpty())
+            {
+                val service = WorshipService(firstHymn,firstHymnNumber,psalm,secondHymn,secondHymnNumber)
+                modal.insert(service)
                 Toast.makeText(applicationContext,"Service has been updated!", Toast.LENGTH_SHORT).show()
                 serviceAdapter.notifyDataSetChanged()
                 dialog.dismiss()

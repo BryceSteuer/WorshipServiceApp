@@ -11,77 +11,93 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <LinearLayout
+            android:id="@+id/idLL1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:weightSum="5"
-            android:id="@+id/idLL1">
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="2"
-                android:text="Item Name"
-                android:textColor="@color/white"
-                android:padding="4dp"
-                android:layout_margin="3dp"
-                android:id="@+id/TVItemName"
-                />
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Quantity"
-                android:textColor="@color/white"
-                android:padding="4dp"
-                android:layout_margin="3dp"
-                android:id="@+id/TVItemQuantity"
-                />
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1.5"
-                android:text="Rate"
-                android:textColor="@color/white"
-                android:padding="4dp"
-                android:layout_margin="3dp"
-                android:id="@+id/TVItemRate"
-                />
-            <ImageView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.5"
-                android:padding="4dp"
-                android:layout_margin="3dp"
-                android:id="@+id/idTVDelete"
-                android:src="@drawable/ic_delete"
-                app:tint="@color/white"
-                />
-        </LinearLayout>
+            >
 
-        <TextView
-            android:id="@+id/idTVHeader"
+            <TextView
+                android:id="@+id/TVFirstHymnName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_weight="2"
+                android:padding="4dp"
+                android:text="1st Hymn Name"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/TVFirstHymnNumber"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_weight="2"
+                android:padding="4dp"
+                android:text="1st Hymn #"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/TVPsalmNumber"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:padding="4dp"
+                android:text="Psalm #"
+                android:textColor="@color/white" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/idLL3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Total Cost"
-            android:layout_below="@id/idLL1"
-            android:layout_toLeftOf="@id/idTVTotalAmt"
-            android:textColor="@color/white"
-            android:layout_margin="3dp"
-            android:padding="4dp"
-            />
-        <TextView
-            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="4"
+            android:layout_below="@id/idLL1">
+            <TextView
+                android:id="@+id/TVSecondHymnName"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:padding="4dp"
+                android:text="2nd Hymn Name"
+                android:textColor="@color/white" />
+            <TextView
+                android:id="@+id/TVSecondHymnNumber"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:padding="4dp"
+                android:text="2nd Hymn #"
+                android:textColor="@color/white" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/idLL4"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/idTVTotalAmt"
-            android:textColor="@color/white"
-            android:layout_below="@id/idLL1"
-            android:layout_alignParentEnd="true"
-            android:text="Amt"
-            android:layout_margin="3dp"
-            android:padding="4dp"
-            />
+            android:orientation="horizontal"
+            android:weightSum="4"
+            android:layout_below="@id/idLL3">
 
+            <ImageView
+                android:id="@+id/idTVDelete"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="3dp"
+                android:layout_marginBottom="3dp"
+                android:layout_weight="0.5"
+                android:padding="4dp"
+                android:src="@drawable/ic_delete"
+                android:tooltipText="Delete this service"
+                app:tint="@color/white" />
+        </LinearLayout>
 
 
     </RelativeLayout>

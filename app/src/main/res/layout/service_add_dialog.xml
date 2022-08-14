@@ -116,7 +116,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/SecondHymn"
                     android:layout_margin="5dp"
-                    android:inputType="number"
+                    android:inputType="text"
                     android:textColorHint="@color/white"
                     android:textColor="@color/white"
                     android:textSize="14sp"

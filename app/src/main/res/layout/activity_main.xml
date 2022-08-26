@@ -22,6 +22,7 @@
         android:src="@drawable/ic_add"
         app:tint="@color/white"
         android:id="@+id/idFABAdd"
+        app:borderWidth="0dp"
         android:backgroundTint="@color/blue_shade_1"
         android:layout_alignParentRight="true"/>
 

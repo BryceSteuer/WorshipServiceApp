@@ -19,6 +19,15 @@
             android:orientation="horizontal"
             android:weightSum="5"
             >
+            <TextView android:id="@+id/Hymn1TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:layout_margin="3dp"
+                android:padding="4dp"
+                android:layout_weight="1"
+                android:textStyle="bold|italic"
+                android:text="First Hymn" />
 
             <TextView
                 android:id="@+id/TVFirstHymnName"
@@ -39,16 +48,32 @@
                 android:padding="4dp"
                 android:text="1st Hymn #"
                 android:textColor="@color/white" />
-
-            <TextView
-                android:id="@+id/TVPsalmNumber"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="3dp"
-                android:layout_weight="1"
-                android:padding="4dp"
-                android:text="Psalm #"
-                android:textColor="@color/white" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/idLL2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="4"
+            android:layout_below="@id/idLL1">
+        <TextView android:id="@+id/PsalmTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_margin="3dp"
+            android:padding="4dp"
+            android:layout_weight="1"
+            android:textStyle="bold|italic"
+            android:text="Psalm" />
+        <TextView
+            android:id="@+id/TVPsalmNumber"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            android:padding="4dp"
+            android:text="Psalm #"
+            android:textColor="@color/white" />
         </LinearLayout>
         <LinearLayout
             android:id="@+id/idLL3"
@@ -56,13 +81,22 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:weightSum="4"
-            android:layout_below="@id/idLL1">
+            android:layout_below="@id/idLL2">
+            <TextView android:id="@+id/Hymn2TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:layout_margin="3dp"
+                android:padding="4dp"
+                android:layout_weight="1"
+                android:textStyle="bold|italic"
+                android:text="Second Hymn" />
             <TextView
                 android:id="@+id/TVSecondHymnName"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_margin="3dp"
-                android:layout_weight="1"
+                android:layout_weight="2"
                 android:padding="4dp"
                 android:text="2nd Hymn Name"
                 android:textColor="@color/white" />
@@ -84,6 +118,15 @@
             android:weightSum="4"
             android:layout_below="@id/idLL3">
 
+            <TextView android:id="@+id/DeleteTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:layout_margin="3dp"
+                android:padding="4dp"
+                android:layout_weight="1"
+                android:textStyle="bold|italic"
+                android:text="Delete this service" />
             <ImageView
                 android:id="@+id/idTVDelete"
                 android:layout_width="0dp"

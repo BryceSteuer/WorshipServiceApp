@@ -23,6 +23,10 @@ class ServiceAdapter
         val psalmTV = itemView.findViewById<TextView>(R.id.TVPsalmNumber)
         val secondNameTV = itemView.findViewById<TextView>(R.id.TVSecondHymnName)
         val secondNumberTV = itemView.findViewById<TextView>(R.id.TVSecondHymnNumber)
+        val thirdNameTV = itemView.findViewById<TextView>(R.id.TVThirdHymnName)
+        val thirdNumberTV = itemView.findViewById<TextView>(R.id.TVThirdHymnNumber)
+        val fourthNameTV = itemView.findViewById<TextView>(R.id.TVFourthHymnName)
+        val fourthNumberTV = itemView.findViewById<TextView>(R.id.TVFourthHymnNumber)
         val deleteTV = itemView.findViewById<ImageView>(R.id.idTVDelete)
 
     }
@@ -43,6 +47,10 @@ class ServiceAdapter
         holder.psalmTV.text = list.get(position).psalm
         holder.secondNameTV.text = list.get(position).secondHymnName
         holder.secondNumberTV.text = list.get(position).secondHymnNumber
+        holder.thirdNameTV.text = list.get(position).thirdHymnName
+        holder.thirdNumberTV.text = list.get(position).thirdHymnNumber
+        holder.fourthNameTV.text = list.get(position).fourthHymnName
+        holder.fourthNumberTV.text = list.get(position).fourthHymnNumber
         holder.deleteTV.setOnClickListener {
             worshipServiceClickInterface.onItemClick(list.get(position))
         }

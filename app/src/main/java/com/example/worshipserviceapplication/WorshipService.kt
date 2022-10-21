@@ -23,6 +23,18 @@ data class WorshipService (
     @ColumnInfo(name = "secondHymnNumber")
     var secondHymnNumber: String,
 
+    @ColumnInfo(name = "thirdHymnName")
+    var thirdHymnName: String,
+
+    @ColumnInfo(name = "thirdHymnNumber")
+    var thirdHymnNumber: String,
+
+    @ColumnInfo(name = "fourthHymnName")
+    var fourthHymnName: String,
+
+    @ColumnInfo(name = "fourthHymnNumber")
+    var fourthHymnNumber: String,
+
 ){
     @PrimaryKey(autoGenerate = true)
     var Id: Int? = null

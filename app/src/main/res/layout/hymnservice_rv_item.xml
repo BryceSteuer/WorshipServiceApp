@@ -19,35 +19,44 @@
             android:orientation="horizontal"
             android:weightSum="5"
             >
-            <TextView android:id="@+id/Hymn1TextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/white"
-                android:layout_margin="3dp"
-                android:padding="4dp"
-                android:layout_weight="1"
-                android:textStyle="bold|italic"
-                android:text="First Hymn" />
-
-            <TextView
-                android:id="@+id/TVFirstHymnName"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="3dp"
-                android:layout_weight="2"
-                android:padding="4dp"
-                android:text="1st Hymn Name"
-                android:textColor="@color/white" />
-
-            <TextView
-                android:id="@+id/TVFirstHymnNumber"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="3dp"
-                android:layout_weight="2"
-                android:padding="4dp"
-                android:text="1st Hymn #"
-                android:textColor="@color/white" />
+            <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp">
+                <TableRow>
+                    <TextView android:id="@+id/Hymn1TextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:layout_margin="3dp"
+                        android:padding="4dp"
+                        android:layout_weight="1"
+                        android:textStyle="bold|italic"
+                        android:text="First Hymn" />
+                    <TextView
+                        android:id="@+id/TVFirstHymnName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="3dp"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:padding="4dp"
+                        android:text="1st Hymn Name"
+                        android:textColor="@color/white" />
+                    <TextView
+                        android:id="@+id/TVFirstHymnNumber"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="3dp"
+                        android:layout_weight="2"
+                        android:gravity="right"
+                        android:padding="4dp"
+                        android:text="1st Hymn #"
+                        android:textColor="@color/white" />
+                </TableRow>
+            </TableLayout>
         </LinearLayout>
         <LinearLayout
             android:id="@+id/idLL2"
@@ -56,24 +65,35 @@
             android:orientation="horizontal"
             android:weightSum="4"
             android:layout_below="@id/idLL1">
-        <TextView android:id="@+id/PsalmTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/white"
-            android:layout_margin="3dp"
-            android:padding="4dp"
-            android:layout_weight="1"
-            android:textStyle="bold|italic"
-            android:text="Psalm" />
-        <TextView
-            android:id="@+id/TVPsalmNumber"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="3dp"
-            android:layout_weight="1"
-            android:padding="4dp"
-            android:text="Psalm #"
-            android:textColor="@color/white" />
+            <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp">
+                    <TableRow>
+                        <TextView android:id="@+id/PsalmTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:layout_margin="3dp"
+                            android:padding="4dp"
+                            android:gravity="left"
+                            android:layout_weight="1"
+                            android:textStyle="bold|italic"
+                            android:text="Psalm" />
+                        <TextView
+                            android:id="@+id/TVPsalmNumber"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:padding="4dp"
+                            android:text="Psalm #"
+                            android:textColor="@color/white" />
+                    </TableRow>
+            </TableLayout>
         </LinearLayout>
         <LinearLayout
             android:id="@+id/idLL3"
@@ -82,33 +102,45 @@
             android:orientation="horizontal"
             android:weightSum="4"
             android:layout_below="@id/idLL2">
-            <TextView android:id="@+id/Hymn2TextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/white"
-                android:layout_margin="3dp"
-                android:padding="4dp"
-                android:layout_weight="1"
-                android:textStyle="bold|italic"
-                android:text="Second Hymn" />
-            <TextView
-                android:id="@+id/TVSecondHymnName"
-                android:layout_width="0dp"
+            <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="3dp"
-                android:layout_weight="2"
-                android:padding="4dp"
-                android:text="2nd Hymn Name"
-                android:textColor="@color/white" />
-            <TextView
-                android:id="@+id/TVSecondHymnNumber"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_margin="3dp"
-                android:layout_weight="1"
-                android:padding="4dp"
-                android:text="2nd Hymn #"
-                android:textColor="@color/white" />
+                android:layout_marginTop="10dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp">
+                <TableRow>
+                    <TextView android:id="@+id/Hymn2TextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:layout_margin="3dp"
+                        android:padding="4dp"
+                        android:gravity="left"
+                        android:layout_weight="1"
+                        android:textStyle="bold|italic"
+                        android:text="Second Hymn" />
+                    <TextView
+                        android:id="@+id/TVSecondHymnName"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="3dp"
+                        android:layout_weight="2"
+                        android:padding="4dp"
+                        android:gravity="center"
+                        android:text="2nd Hymn Name"
+                        android:textColor="@color/white" />
+                    <TextView
+                        android:id="@+id/TVSecondHymnNumber"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="3dp"
+                        android:layout_weight="1"
+                        android:padding="4dp"
+                        android:gravity="right"
+                        android:text="Hymn #"
+                        android:textColor="@color/white" />
+                </TableRow>
+            </TableLayout>
         </LinearLayout>
         <LinearLayout
             android:id="@+id/idLL4"
@@ -117,29 +149,132 @@
             android:orientation="horizontal"
             android:weightSum="4"
             android:layout_below="@id/idLL3">
-
-            <TextView android:id="@+id/DeleteTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/white"
-                android:layout_margin="3dp"
-                android:padding="4dp"
-                android:layout_weight="1"
-                android:textStyle="bold|italic"
-                android:text="Delete this service" />
-            <ImageView
-                android:id="@+id/idTVDelete"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="3dp"
-                android:layout_marginTop="3dp"
-                android:layout_marginEnd="3dp"
-                android:layout_marginBottom="3dp"
-                android:layout_weight="0.5"
-                android:padding="4dp"
-                android:src="@drawable/ic_delete"
-                android:tooltipText="Delete this service"
-                app:tint="@color/white" />
+                <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp">
+                    <TableRow>
+                        <TextView android:id="@+id/Hymn3TextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:layout_margin="3dp"
+                            android:padding="4dp"
+                            android:gravity="left"
+                            android:layout_weight="1"
+                            android:textStyle="bold|italic"
+                            android:text="Third Hymn" />
+                        <TextView
+                            android:id="@+id/TVThirdHymnName"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="3dp"
+                            android:layout_weight="2"
+                            android:padding="4dp"
+                            android:gravity="center"
+                            android:text="3rd Hymn Name"
+                            android:textColor="@color/white" />
+                        <TextView
+                            android:id="@+id/TVThirdHymnNumber"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="3dp"
+                            android:layout_weight="1"
+                            android:padding="4dp"
+                            android:gravity="right"
+                            android:text="Hymn #"
+                            android:textColor="@color/white" />
+                    </TableRow>
+                </TableLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/idLL5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="4"
+            android:layout_below="@id/idLL4">
+            <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp">
+                <TableRow>
+                    <TextView android:id="@+id/Hymn4TextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:layout_margin="3dp"
+                        android:padding="4dp"
+                        android:gravity="left"
+                        android:layout_weight="1"
+                        android:textStyle="bold|italic"
+                        android:text="Fourth Hymn" />
+                    <TextView
+                        android:id="@+id/TVFourthHymnName"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="3dp"
+                        android:layout_weight="2"
+                        android:padding="4dp"
+                        android:gravity="center"
+                        android:text="4th Hymn Name"
+                        android:textColor="@color/white" />
+                    <TextView
+                        android:id="@+id/TVFourthHymnNumber"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="3dp"
+                        android:layout_weight="1"
+                        android:padding="4dp"
+                        android:gravity="right"
+                        android:text="Hymn #"
+                        android:textColor="@color/white" />
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/idLL6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="4"
+            android:layout_below="@id/idLL5">
+            <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp">
+                <TableRow>
+                <TextView android:id="@+id/DeleteTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:layout_margin="3dp"
+                    android:padding="4dp"
+                    android:gravity="left"
+                    android:layout_weight="1"
+                    android:textStyle="bold|italic"
+                    android:text="Delete this service" />
+                <ImageView
+                    android:id="@+id/idTVDelete"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginEnd="3dp"
+                    android:layout_marginBottom="3dp"
+                    android:layout_weight="0.5"
+                    android:padding="4dp"
+                    android:src="@drawable/ic_delete"
+                    android:tooltipText="Delete this service"
+                    app:tint="@color/white" />
+                </TableRow>
+            </TableLayout>
         </LinearLayout>
 
 

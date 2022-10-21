@@ -54,6 +54,10 @@ class MainActivity : AppCompatActivity(), ServiceAdapter.WorshipServiceClickInte
         val psalmEdt = dialog.findViewById<EditText>(R.id.EdtPsalm)
         val secondHymnEdt = dialog.findViewById<EditText>(R.id.SecondHymn)
         val secondHymnNumberEdt = dialog.findViewById<EditText>(R.id.SecondHymnNumber)
+        val thirdHymnEdt = dialog.findViewById<EditText>(R.id.ThirdHymn)
+        val thirdHymnNumberEdt = dialog.findViewById<EditText>(R.id.ThirdHymnNumber)
+        val fourthHymnEdt = dialog.findViewById<EditText>(R.id.FourthHymn)
+        val fourthHymnNumberEdt = dialog.findViewById<EditText>(R.id.FourthHymnNumber)
         cancelBtn.setOnClickListener {
             Toast.makeText(applicationContext,"Cancelled", Toast.LENGTH_SHORT).show()
             dialog.dismiss()
@@ -64,13 +68,23 @@ class MainActivity : AppCompatActivity(), ServiceAdapter.WorshipServiceClickInte
             val psalm : String = psalmEdt.text.toString()
             val secondHymn : String = secondHymnEdt.text.toString()
             val secondHymnNumber : String = secondHymnNumberEdt.text.toString()
+            val thirdHymn : String = thirdHymnEdt.text.toString()
+            val thirdHymnNumber : String = thirdHymnNumberEdt.text.toString()
+            val fourthHymn : String = fourthHymnEdt.text.toString()
+            val fourthHymnNumber : String = fourthHymnNumberEdt.text.toString()
+
             if(firstHymn.isNotEmpty() &&
                     firstHymnNumber.isNotEmpty() &&
                     psalm.isNotEmpty() &&
                     secondHymn.isNotEmpty() &&
-                    secondHymnNumber.isNotEmpty())
+                    secondHymnNumber.isNotEmpty() &&
+                    thirdHymn.isNotEmpty() &&
+                    thirdHymnNumber.isNotEmpty() &&
+                    fourthHymn.isNotEmpty() &&
+                    fourthHymnNumber.isNotEmpty())
             {
-                val service = WorshipService(firstHymn,firstHymnNumber,psalm,secondHymn,secondHymnNumber)
+                val service = WorshipService(firstHymn,firstHymnNumber,psalm,secondHymn,
+                    secondHymnNumber,thirdHymn,thirdHymnNumber,fourthHymn,fourthHymnNumber)
                 modal.insert(service)
                 Toast.makeText(applicationContext,"Service has been updated!", Toast.LENGTH_SHORT).show()
                 serviceAdapter.notifyDataSetChanged()

@@ -15,164 +15,255 @@
             android:layout_height="wrap_content"
             android:text="Add a New Service"
             android:textAllCaps="false"
+            android:background="@color/white"
             android:textAlignment="center"
             android:gravity="center"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textStyle="bold"
             android:textSize="20dp"
             android:padding="4dp"
-            android:layout_margin="4dp"
             android:id="@+id/idTVHeading"
             />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_below="@id/idTVHeading"
-            >
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                style="@style/TextInputEditTextTheme"
-                android:layout_margin="5dp"
-                android:hint="Enter First Hymn Name"
-                android:padding="5dp"
-                android:textColorHint="@color/white"
-                app:hintTextColor="@color/white"
-                >
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/EdtFirstHymn"
-                    android:layout_margin="5dp"
-                    android:inputType="text"
-                    android:textColorHint="@color/white"
-                    android:textColor="@color/white"
-                    android:textSize="14sp"
-                    />
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                style="@style/TextInputEditTextTheme"
-                android:layout_margin="5dp"
-                android:hint="Enter First Hymn Number"
-                android:layout_toRightOf="@+id/EdtFirstHymnName"
-                android:padding="20dp"
-                android:textColorHint="@color/white"
-                app:hintTextColor="@color/white"
-                >
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/EdtFirstHymnNumber"
-                    android:layout_margin="5dp"
-                    android:inputType="number"
-                    android:textColorHint="@color/white"
-                    android:textColor="@color/white"
-                    android:textSize="14sp"
-                    />
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                style="@style/TextInputEditTextTheme"
-                android:layout_margin="5dp"
-                android:hint="Enter Psalm Number"
-                android:padding="5dp"
-                android:textColorHint="@color/white"
-                app:hintTextColor="@color/white"
-                >
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/EdtPsalm"
-                    android:layout_margin="5dp"
-                    android:inputType="number"
-                    android:textColorHint="@color/white"
-                    android:textColor="@color/white"
-                    android:textSize="14sp"
-                    />
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                style="@style/TextInputEditTextTheme"
-                android:layout_margin="5dp"
-                android:hint="Enter Second Hymn Name"
-                android:padding="5dp"
-                android:textColorHint="@color/white"
-                app:hintTextColor="@color/white"
-                >
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/SecondHymn"
-                    android:layout_margin="5dp"
-                    android:inputType="text"
-                    android:textColorHint="@color/white"
-                    android:textColor="@color/white"
-                    android:textSize="14sp"
-                    />
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                style="@style/TextInputEditTextTheme"
-                android:layout_margin="5dp"
-                android:hint="Enter Second Hymn Number"
-                android:padding="20dp"
-                android:textColorHint="@color/white"
-                app:hintTextColor="@color/white"
-                >
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/SecondHymnNumber"
-                    android:layout_margin="5dp"
-                    android:inputType="number"
-                    android:textColorHint="@color/white"
-                    android:textColor="@color/white"
-                    android:textSize="14sp"
-                    />
-            </com.google.android.material.textfield.TextInputLayout>
-
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_margin="5dp"
-                    android:weightSum="2">
-                    <Button
-                        android:layout_width="0dp"
+                    android:orientation="vertical"
+                    android:layout_marginTop="35dp"
+                    android:layout_below="@id/idTVHeading"
+                    >
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:layout_margin="8dp"
-                        android:id="@+id/idButtonCancel"
-                        android:text="Cancel"
-                        android:background="@drawable/custom_button_back"
-                        android:textAllCaps="false"/>
-                    <Button
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:layout_margin="8dp"
-                        android:id="@+id/idButtonAdd"
-                        android:text="Add"
-                        android:background="@drawable/custom_button_back"
-                        android:textAllCaps="false"/>
+                        style="@style/TextInputEditTextTheme"
+                        android:layout_margin="5dp"
+                        android:hint="Enter First Hymn Name"
+                        android:padding="5dp"
+                        android:textColorHint="@color/white"
+                        app:hintTextColor="@color/white"
+                        >
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/EdtFirstHymn"
+                            android:layout_margin="5dp"
+                            android:inputType="text"
+                            android:textColorHint="@color/white"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            />
 
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/TextInputEditTextTheme"
+                        android:layout_margin="5dp"
+                        android:hint="Enter First Hymn Number"
+                        android:layout_toRightOf="@+id/EdtFirstHymnName"
+                        android:padding="20dp"
+                        android:textColorHint="@color/white"
+                        app:hintTextColor="@color/white"
+                        >
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/EdtFirstHymnNumber"
+                            android:layout_margin="5dp"
+                            android:inputType="number"
+                            android:textColorHint="@color/white"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/TextInputEditTextTheme"
+                        android:layout_margin="5dp"
+                        android:hint="Enter Psalm Number"
+                        android:padding="5dp"
+                        android:textColorHint="@color/white"
+                        app:hintTextColor="@color/white"
+                        >
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/EdtPsalm"
+                            android:layout_margin="5dp"
+                            android:inputType="number"
+                            android:textColorHint="@color/white"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/TextInputEditTextTheme"
+                        android:layout_margin="5dp"
+                        android:hint="Enter Second Hymn Name"
+                        android:padding="5dp"
+                        android:textColorHint="@color/white"
+                        app:hintTextColor="@color/white"
+                        >
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/SecondHymn"
+                            android:layout_margin="5dp"
+                            android:inputType="text"
+                            android:textColorHint="@color/white"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/TextInputEditTextTheme"
+                        android:layout_margin="5dp"
+                        android:hint="Enter Second Hymn Number"
+                        android:padding="20dp"
+                        android:textColorHint="@color/white"
+                        app:hintTextColor="@color/white"
+                        >
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/SecondHymnNumber"
+                            android:layout_margin="5dp"
+                            android:inputType="number"
+                            android:textColorHint="@color/white"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/TextInputEditTextTheme"
+                        android:layout_margin="5dp"
+                        android:hint="Enter Third Hymn Name"
+                        android:padding="5dp"
+                        android:textColorHint="@color/white"
+                        app:hintTextColor="@color/white"
+                        >
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/ThirdHymn"
+                            android:layout_margin="5dp"
+                            android:inputType="text"
+                            android:textColorHint="@color/white"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/TextInputEditTextTheme"
+                        android:layout_margin="5dp"
+                        android:hint="Enter Third Hymn Number"
+                        android:padding="20dp"
+                        android:textColorHint="@color/white"
+                        app:hintTextColor="@color/white"
+                        >
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/ThirdHymnNumber"
+                            android:layout_margin="5dp"
+                            android:inputType="number"
+                            android:textColorHint="@color/white"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/TextInputEditTextTheme"
+                        android:layout_margin="5dp"
+                        android:hint="Enter Third Hymn Name"
+                        android:padding="5dp"
+                        android:textColorHint="@color/white"
+                        app:hintTextColor="@color/white"
+                        >
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/FourthHymn"
+                            android:layout_margin="5dp"
+                            android:inputType="text"
+                            android:textColorHint="@color/white"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/TextInputEditTextTheme"
+                        android:layout_margin="5dp"
+                        android:hint="Enter Fourth Hymn Number"
+                        android:padding="20dp"
+                        android:textColorHint="@color/white"
+                        app:hintTextColor="@color/white"
+                        >
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/FourthHymnNumber"
+                            android:layout_margin="5dp"
+                            android:inputType="number"
+                            android:textColorHint="@color/white"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_margin="5dp"
+                        android:weightSum="2">
+                        <Button
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_margin="8dp"
+                            android:id="@+id/idButtonCancel"
+                            android:text="Cancel"
+                            android:background="@drawable/custom_button_back"
+                            android:textAllCaps="false"/>
+                        <Button
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_margin="8dp"
+                            android:id="@+id/idButtonAdd"
+                            android:text="Add"
+                            android:background="@drawable/custom_button_back"
+                            android:textAllCaps="false"/>
+                    </LinearLayout>
                 </LinearLayout>
-
-            </com.google.android.material.textfield.TextInputLayout>
-        </LinearLayout>
+        </ScrollView>
     </RelativeLayout>
 
 </androidx.cardview.widget.CardView>
